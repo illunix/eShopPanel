@@ -7,6 +7,29 @@
 
             <p class="login-box-msg">Sign in to start your session</p>
 
+            <b-form @submit.prevent="signIn">
+                <b-alert variant="danger" :show="invalidCredentials">Some of your information is incorrect.</b-alert>
+
+                <b-form-group label-for="email-input">
+                    <b-form-input id="email-input" v-model="email" placeholder="Email"></b-form-input>
+                    <div class="text-danger" v-if="signInSubmitted && !$v.email.required">Email is required</div>
+                    <div class="text-danger" v-if="signInSubmitted && !$v.email.email">Provide correct email</div>
+                </b-form-group>
+                <b-form-group label-for="password-input">
+                    <b-form-input id="password-input" v-model="password" placeholder="Password" type="password"></b-form-input>
+                    <div class="text-danger" v-if="signInSubmitted && !$v.password.required">Password is required</div>
+                </b-form-group>
+                <b-row>
+                    <b-col cols="7">
+                        <b-form-checkbox value="false">
+                            Remember Me
+                        </b-form-checkbox>
+                    </b-col>
+                    <b-col cols="5">
+                        <b-button block variant="primary" type="submit">Sign In</b-button>
+                    </b-col>
+                </b-row>
+            </b-form>
         </b-card>
     </div>
 </div>

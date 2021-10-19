@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace eShopPanel.Areas.Panel.Account
 {
-    [Route("[area]/[action]")]
+    [Route("api/[area]/[action]")]
     public partial class AccountController : BaseController
     {
         private readonly IMediator _mediator;
 
         [HttpPost]
+        [ActionName("sign-in")]
         public async Task<IActionResult> SignIn([FromBody] SignIn.Command command)
         {
             var commandResult = await _mediator.Send(command);
@@ -23,6 +24,7 @@ namespace eShopPanel.Areas.Panel.Account
         }
 
         [HttpPost]
+        [ActionName("sign-up")]
         public async Task<IActionResult> SignUp([FromBody] SignUp.Command command)
         {
             var commandResult = await _mediator.Send(command);

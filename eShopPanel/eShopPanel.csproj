@@ -15,8 +15,20 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\app.ts" />
+    <None Remove="ClientApp\src\modules\main\header\header.ts" />
+    <None Remove="ClientApp\src\modules\main\header\header.vue" />
+    <None Remove="ClientApp\src\modules\main\main.ts" />
+    <None Remove="ClientApp\src\modules\main\main.vue" />
     <None Remove="ClientApp\src\modules\sign-in\sign-in.ts" />
+    <None Remove="ClientApp\src\pages\dashboard\dashboard.ts" />
+    <None Remove="ClientApp\src\pages\dashboard\dashboard.vue" />
     <None Remove="ClientApp\src\router.ts" />
+    <None Remove="ClientApp\src\store\index.ts" />
+    <None Remove="ClientApp\src\store\ui\actions.ts" />
+    <None Remove="ClientApp\src\store\ui\getters.ts" />
+    <None Remove="ClientApp\src\store\ui\index.ts" />
+    <None Remove="ClientApp\src\store\ui\mutations.ts" />
+    <None Remove="ClientApp\src\utils\helpers.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,10 +53,30 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\app.ts" />
+    <TypeScriptCompile Include="ClientApp\src\modules\main\header\header.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\modules\main\header\header.vue">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\modules\main\main.vue">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\modules\main\main.ts" />
     <TypeScriptCompile Include="ClientApp\src\modules\sign-in\sign-in.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\pages\dashboard\dashboard.vue">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\pages\dashboard\dashboard.ts" />
     <TypeScriptCompile Include="ClientApp\src\router.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\ui\actions.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\ui\getters.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\ui\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\store\ui\mutations.ts" />
+    <TypeScriptCompile Include="ClientApp\src\utils\helpers.ts" />
   </ItemGroup>
 
 </Project>
